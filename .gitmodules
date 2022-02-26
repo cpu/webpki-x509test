@@ -1,0 +1,6 @@
+[submodule "x509test"]
+	path = x509test
+	url = https://github.com/google/x509test.git
+[submodule "der-ascii"]
+	path = der-ascii
+	url = https://github.com/google/der-ascii.git
