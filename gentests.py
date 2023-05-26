@@ -105,7 +105,7 @@ def valid_chain(f, _chain):
         """    let ee = webpki::EndEntityCert::try_from(&include_bytes!("%s")[..])
         .expect("cannot parse valid ee cert");
     ee.verify_is_valid_tls_server_cert(&ALL_SIG_ALGS,
-                                       &webpki::TLSServerTrustAnchors(&[ca]),
+                                       &webpki::TlsServerTrustAnchors(&[ca]),
                                        &intermediates[..],
                                        webpki::Time::from_seconds_since_unix_epoch(%d))
         .expect("ee cert should be valid");"""
@@ -127,7 +127,7 @@ def invalid_chain(f, _chain, error):
         webpki::EndEntityCert::try_from(&include_bytes!("%s")[..])
             .and_then(|ee| {
                 ee.verify_is_valid_tls_server_cert(&ALL_SIG_ALGS,
-                                                   &webpki::TLSServerTrustAnchors(&[ca]),
+                                                   &webpki::TlsServerTrustAnchors(&[ca]),
                                                    &intermediates[..],
                                                    webpki::Time::from_seconds_since_unix_epoch(%d))?;
                 Ok(ee)
