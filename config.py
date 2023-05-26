@@ -43,16 +43,16 @@ error_for_ok_test = dict(
     # XXX: appears to do bytewise comparison of encoding rather than RFC4518
     ok_issuer_asn1_differ="UnknownIssuer",
     # XXX: subjectUniqueID (context[2]) not skipped when expecting extensions (context[3])
-    ok_uniqueid_incomplete_byte="MissingOrMalformedExtensions",
+    ok_uniqueid_incomplete_byte="MalformedExtensions",
     # XXX: support is a RFC5280 'MUST'
     ok_ext_policy_constraints="UnsupportedCriticalExtension",
 )
 
 error_for_xf_test = dict(
     xf_algo_mismatch1="SignatureAlgorithmMismatch",
-    xf_der_invalid_bitstring="MissingOrMalformedExtensions",
+    xf_der_invalid_bitstring="MalformedExtensions",
     xf_der_invalid_nonminimal_int="BadDER",
-    xf_der_invalid_uniqueid="MissingOrMalformedExtensions",
+    xf_der_invalid_uniqueid="MalformedExtensions",
     xf_ext_constraints_neg_pathlen="BadDER",
     # OK: we allow basicConstraints on non-CA certs, which means the clause
     # requiring it to be critical on CA certs does not apply.
@@ -188,6 +188,6 @@ error_for_xf_test = dict(
     xf_v1_extensions="UnsupportedCertVersion",
     xf_v1_uniqueid="UnsupportedCertVersion",
     xf_v2_extensions="UnsupportedCertVersion",
-    xf_v3_uniqueid_noexts1="MissingOrMalformedExtensions",
-    xf_v3_uniqueid_noexts2="MissingOrMalformedExtensions",
+    xf_v3_uniqueid_noexts1="MalformedExtensions",
+    xf_v3_uniqueid_noexts2="MalformedExtensions",
 )
