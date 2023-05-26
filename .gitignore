@@ -1,3 +1,5 @@
 _go.sh
 data
 x509test.rs
+.idea
+.venv

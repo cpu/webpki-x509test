@@ -3,14 +3,37 @@ name: ci
 on:
   pull_request:
   push:
+env:
+  PYTHON_VERSION: "3.11"
 
 jobs:
+  linting:
+    runs-on: ubuntu-latest
+    name: Lint
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          submodules: true
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip' # caching pip dependencies
+
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
+
+      - name: Black Format
+        uses: psf/black@stable
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
           submodules: true

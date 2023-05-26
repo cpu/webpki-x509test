@@ -1,0 +1,11 @@
+[flake8]
+exclude = 
+    .git,
+    __pycache__,
+    src,
+    third-party,
+    target,
+    .cargo,
+    .venv,
+    x509test,
+max-line-length = 120
