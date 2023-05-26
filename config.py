@@ -14,10 +14,10 @@ tests_apply_to_anchor = dict(
     # - should be non-empty
     # - should be marked critical
     # - must either process minimum/maximum or reject
-    # xf_ext_name_constraints_badip = 'BadDER',
-    # xf_ext_name_constraints_empty = 'BadDER',
-    # xf_ext_name_constraints_noncrit = 'BadDER',
-    # xf_ext_name_constraints_minmax = 'BadDER',
+    # xf_ext_name_constraints_badip = 'BadDer',
+    # xf_ext_name_constraints_empty = 'BadDer',
+    # xf_ext_name_constraints_noncrit = 'BadDer',
+    # xf_ext_name_constraints_minmax = 'BadDer',
     # XXX: cA=true without subjectKeyIdentifier should be rejected
     # xf_ext_subject_keyid_ca_absent = '',
 )
@@ -51,9 +51,9 @@ error_for_ok_test = dict(
 error_for_xf_test = dict(
     xf_algo_mismatch1="SignatureAlgorithmMismatch",
     xf_der_invalid_bitstring="MalformedExtensions",
-    xf_der_invalid_nonminimal_int="BadDER",
+    xf_der_invalid_nonminimal_int="BadDer",
     xf_der_invalid_uniqueid="MalformedExtensions",
-    xf_ext_constraints_neg_pathlen="BadDER",
+    xf_ext_constraints_neg_pathlen="BadDer",
     # OK: we allow basicConstraints on non-CA certs, which means the clause
     # requiring it to be critical on CA certs does not apply.
     # xf_ext_constraints_noncritical = '',
@@ -62,13 +62,13 @@ error_for_xf_test = dict(
     # xf_ext_constraints_path_nonca = '',
     # xf_ext_constraints_path_nosign = '',
     # XXX: not rejected as expected
-    # xf_der_pubkey_rsa_nonminimal_int = 'BadDER',
+    # xf_der_pubkey_rsa_nonminimal_int = 'BadDer',
     # XXX: two identical authorityKeyIdentifier extensions not rejected
     # xf_duplicate_extension = 'ExtensionValueInvalid',
     # XXX: two different keyUsage extensions not rejected (as they're ignored)
     # xf_duplicate_extension2 = 'ExtensionValueInvalid',
     # XXX: subjectAltName of " " not rejected
-    # xf_ext_altname_blank_domain = 'BadDER',
+    # xf_ext_altname_blank_domain = 'BadDer',
     # OK: subjectAltName marked critical, but we don't support subject
     # xf_ext_altname_critical_subject = '',
     # OK: email subjectAltName not supported
@@ -78,12 +78,12 @@ error_for_xf_test = dict(
     # xf_ext_altname_empty = '?',
     # XXX: subjectAltName with empty item
     # xf_ext_altname_empty2 = '?',
-    xf_ext_altname_invalid_domain="BadDER",
-    xf_ext_altname_invalid_encoding="BadDER",
+    xf_ext_altname_invalid_domain="BadDer",
+    xf_ext_altname_invalid_encoding="BadDer",
     # OK: registeredID not supported
     # xf_ext_name_constraints_regid = '',
     # XXX: iPAddress with 5 octets not rejected
-    # xf_ext_altname_ip_wrong = 'BadDER',
+    # xf_ext_altname_ip_wrong = 'BadDer',
     # XXX: non-critical sAN not rejected
     # xf_ext_altname_noncrit_nosubj = '?',
     # OK: uniformResourceIdentifier not supported
@@ -113,7 +113,7 @@ error_for_xf_test = dict(
     # XXX: empty OID in eku list
     # f_ext_extended_key_usage_empty_oid = '?',
     xf_ext_extended_any_key_usage="UnknownIssuer",
-    xf_ext_extended_key_usage_empty="BadDER",
+    xf_ext_extended_key_usage_empty="BadDer",
     xf_ext_freshest_crl_critical="UnsupportedCriticalExtension",
     # OK: inhibitAnyPolicy not implemented
     # xf_ext_inhibit_anypolicy_negative = '',
@@ -162,8 +162,8 @@ error_for_xf_test = dict(
     # xf_pubkey_rsa_exponent_negative = '?',
     # xf_pubkey_rsa_modulus_negative = '?',
     # xf_pubkey_rsa_param_nonnull = '?',
-    xf_serial_negative="BadDER",
-    xf_serial_zero="BadDER",
+    xf_serial_negative="BadDer",
+    xf_serial_zero="BadDer",
     # XXX: constraint on issuer, not verifier
     # xf_soon_generalized_time = '',
     # OK: we don't look at subject
