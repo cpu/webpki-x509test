@@ -35,7 +35,7 @@ error_for_ok_test = dict(
     # inhibitAnyPolicy not supported
     ok_ext_inhibit_anypolicy="UnsupportedCriticalExtension",
     # times before 1970 outlawed
-    ok_utc_time_wrap="BadDERTime",
+    ok_utc_time_wrap="BadDerTime",
     # DSA not supported
     ok_inherited_keyparams="UnknownIssuer",
     # policyMappings not supported
@@ -150,9 +150,9 @@ error_for_xf_test = dict(
     # xf_ext_subject_dirattr_empty = '',
     # OK: subjectInfoAccess not implemented
     # xf_ext_subject_info_empty = '',
-    xf_gentime_fraction_secs="BadDERTime",
-    xf_gentime_no_secs="BadDERTime",
-    xf_gentime_nonzulu="BadDERTime",
+    xf_gentime_fraction_secs="BadDerTime",
+    xf_gentime_no_secs="BadDerTime",
+    xf_gentime_nonzulu="BadDerTime",
     xf_issuer_mismatch_v2="UnsupportedCertVersion",
     xf_issuer_mismatch1="UnknownIssuer",
     # XXX: missing validation of subject keys?
@@ -183,8 +183,8 @@ error_for_xf_test = dict(
     xf_nonca_sign_maybe2="UnknownIssuer",
     xf_nonca_sign="UnknownIssuer",
     xf_ext_key_usage_wrong="UnknownIssuer",
-    xf_utctime_nonzulu="BadDERTime",
-    xf_utctime_no_secs="BadDERTime",
+    xf_utctime_nonzulu="BadDerTime",
+    xf_utctime_no_secs="BadDerTime",
     xf_v1_extensions="UnsupportedCertVersion",
     xf_v1_uniqueid="UnsupportedCertVersion",
     xf_v2_extensions="UnsupportedCertVersion",
