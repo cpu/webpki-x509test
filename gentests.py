@@ -133,7 +133,7 @@ def invalid_chain(f, _chain, error):
                 Ok(ee)
             })
             .and_then(|ee| {
-                ee.verify_is_valid_for_dns_name(webpki::DnsNameRef::try_from_ascii_str("example.com").unwrap())
+                ee.verify_is_valid_for_subject_name(webpki::DnsNameRef::try_from_ascii_str("example.com").unwrap())
             })
             .expect_err("ee cert/chain/name expected to be invalid"),
         webpki::Error::%s
